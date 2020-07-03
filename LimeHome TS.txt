@@ -1,0 +1,57 @@
+Task #1: Writing Test Scenarios
+
+HomePage:
+
+	TS_001: Check whether all elements are fully visible and can be interracted with on both desktop/mobile devices
+	TS_002: Check if Logo links to HomePage 
+	TS_003: Check if language selector switches to appropriate language with correct translations
+	TS_004: Check if validation messages are present for both input fields when filled with incorrect data (ie. non alphanumeric characters for Reference field) or validated when empty
+	TS_005: Check if the Submit button can be clicked on after inputs are filled with correct data
+	TS_006: Check if the redirect is correct after Submit button is clicked on
+
+YourBookingDetails:
+
+    TS_007: Check whether all elements are fully visible on both desktop/mobile devices
+	TS_008: Check if Last Name and Booking reference match the data entered on previous step
+	TS_009: Check if Logo links to HomePage 
+	TS_010: Check if language selector switches to appropriate language with correct translations
+	TS_011: Check if validation messages are present for all mandatory input fields when filled with incorrect data or validated when empty
+	TS_012: Check if validation messages disappear when input fields are filled with correct data
+	TS_013: Check if input fields can be edited
+	TS_014: Check if datepicker can be interracted with and the date format is correct (ie. DD/MM/YYYY)
+	TS_015: Check if Drop Down menus and all child items are visible and can be interracted with
+	TS_016: Check if Passport section appears once Nationality drop down value changes from German
+	TS_017: Check if Passport input field works properly
+	TS_018: Check if image upload field works propely for multiple file types (.png / .jpg , etc)
+	TS_019: Check if Passport section disappears once Nationality drop down value changes back to German
+	TS_020: Check if the redirect is correct after Submit button is clicked on and inputs are filled with correct data
+	
+ThankYou:
+
+	TS_021: Check whether all elements are fully visible and can be interracted with on both desktop/mobile devices
+	TS_022: Check if Logo links to HomePage 
+	TS_033: Check if language selector switches to appropriate language with correct translations
+	
+	
+Task #2: Finding defects
+
+	Bug#1: When located on homepage, if the user clicks on "DE" language switcher content remains untranslated 
+	Bug#2: Clicking on logo doesn't redirect user to homepage. Applies to all pages where Logo is visible
+	Bug#3: When located on YourBookingDetails page, if the user clicks on "DE" language switcher content is partially translated
+	Bug#4: When located on YourBookingDetails page, user can set Date of Birth to be future date, which should be restricted
+	Bug#5: When located on YourBookingDetails page, even though Type of Stay, Date of Birth, Passport section are mandatory, when validated empty, message appears but fields are not highlighted
+	Bug#6: When located on ThankYou Page, if the user clicks on "DE" language switcher content remains untranslated
+
+
+Task #3: Defect reporting
+
+   Step1 Navigate to https://limehome-qa-task.herokuapp.com/
+   Step2 Enter valid data in the "Last Name" input field
+   Step3 Enter valid data in the "Booking Reference" field
+   Step4 Click Submit button
+   Step5 Validate that you are located on correct page (Your Booking Details)
+   Step6 Open the "Date of birth" date picker and set the value to future date
+   Step7 Fill in rest of the form with correct data and click "Submit" button
+		Expected result: Validation error is triggered highlighting the datepicker field until value is changed to past date
+		Actual result: Form is submitted successfully and user is presented with the Thank You page
+	
